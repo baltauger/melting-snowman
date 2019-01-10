@@ -29,7 +29,7 @@ $(function() {
 	window.story.start($('#main'));
 
 	// but to get passage events you need to have started the story
-	
+
 	/**
 	 Triggered whenever a passage is about to be replaced onscreen with
 	 another. The passage being hidden is stored in the passage property of
@@ -58,6 +58,11 @@ $(function() {
 	**/
 	$('.passage').on('shown.sm.passage',function(event,passage){
 		console.log('shown.sm.passage');
+
+		var drama = new DramaReader('#drama');
+		drama.setWpm(200);
+		drama.setInput(passage.passage.source);
+		drama.start();
 	});
 
 });
