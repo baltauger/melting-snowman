@@ -1,0 +1,3 @@
+[submodule "src/drama"]
+	path = src/drama
+	url = git@github.com:baltauger/drama.git
