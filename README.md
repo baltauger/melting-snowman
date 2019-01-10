@@ -4,7 +4,7 @@
 
 ## Snowman
 
-Snowman is a minimal Twine 2 story format designed for people who already know
+[Snowman](https://github.com/videlais/snowman) is a minimal Twine 2 story format designed for people who already know
 JavaScript and CSS. It's designed to implement basic functionality for playing
 Twine stories and then get out of your way.
 
