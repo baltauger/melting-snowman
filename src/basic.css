@@ -1,5 +1,17 @@
 /* Give ourselves some decent defaults. */
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:before,:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
 body {
 	font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #222;
@@ -28,6 +40,100 @@ a:active {
 
 tw-storydata {
 	display: none;
+}
+
+#drama_holder{
+    width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 99999999999999999;
+}
+
+#drama_spacer{
+    width: 100%;
+}
+
+#drama_container{
+    background-color: #ffffff;
+}
+
+#drama_result{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+    line-height: 1.5;
+}
+
+#guide_top{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+    color: #DDDDDD;
+}
+
+#guide_bottom{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+    color: #DDDDDD;
+}
+
+#notch{
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+    color: #DDDDDD;
+}
+
+#drama_credits{
+    float: right;
+    font-family: 'Droid Sans Mono', sans-serif;
+    font-size: 13px;
+}
+
+#drama_credits a{
+    color: #dddddd;
+    text-decoration: none;
+}
+
+#drama_selector{
+    float: left;
+    width: auto;
+}
+
+.invisible{
+    font-family: 'Droid Sans Mono', sans-serif;
+    color: #ffffff;
+}
+
+.drama_start{
+    color: #333333;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+.drama_pivot{
+    color: #DE0000;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+.drama_end{
+    color: #333333;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Droid Sans Mono', sans-serif;
+}
+
+
+@media only screen and (max-device-width: 480px){
+    #drama_result, #guide_top, #guide_bottom, #notch, #drama_start, #drama_pivot, #drama_end{
+        font-size:14px;
+    }
+    .drama_start, .drama_pivot, .drama_end{
+        font-size:14px;
+    }
 }
 
 /* scale font sizes for phones */

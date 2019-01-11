@@ -59,9 +59,9 @@ $(function() {
 	$('.passage').on('shown.sm.passage',function(event,passage){
 		console.log('shown.sm.passage');
 
-		var drama = new DramaReader('#drama');
+		var drama = new DramaReader('#drama_result');
 		drama.setWpm(200);
-		drama.setInput(passage.passage.source);
+		drama.setInput(passage.passage.render());
 		drama.start();
 	});
 
