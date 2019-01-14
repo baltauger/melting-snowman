@@ -10,7 +10,7 @@ var DramaReader = window.DramaReader = require('./drama/drama-reader')
 
 $(function() {
 	window.story = new Story($('tw-storydata'));
-	
+
 
 	// Add relevant event handlers here (other events relate to saving, don't know how that affects me)
 
@@ -59,10 +59,10 @@ $(function() {
 	$('.passage').on('shown.sm.passage',function(event,passage){
 		console.log('shown.sm.passage');
 
-		var drama = new DramaReader('#drama_result');
+		var drama = window.drama = new DramaReader('#drama_result');
 		drama.setWpm(200);
 		drama.setInput(passage.passage.render());
-		drama.start();
+		//drama.start();
 	});
 
 });
