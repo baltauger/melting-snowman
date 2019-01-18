@@ -62,7 +62,7 @@ $(function() {
 		var drama = window.drama = new DramaReader('#drama_result');
 		drama.setWpm(200);
 		drama.setInput(passage.passage.render());
-		//drama.start();
+		drama.start();
 	});
 
 });
