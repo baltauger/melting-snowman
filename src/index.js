@@ -11,6 +11,7 @@ var DramaReader = window.DramaReader = require('./drama/drama-reader')
 $(function() {
 	window.story = new Story($('tw-storydata'));
 
+	window.drama = new DramaReader('#drama_result');
 
 	// Add relevant event handlers here (other events relate to saving, don't know how that affects me)
 
@@ -38,6 +39,8 @@ $(function() {
 	**/
 	$('.passage').on('hide.sm.passage',function(event,passage){
 		console.log('hide.sm.passage');
+		var drama = window.drama;
+		drama.stop();
 	});
 
 	/**
@@ -59,9 +62,9 @@ $(function() {
 	$('.passage').on('shown.sm.passage',function(event,passage){
 		console.log('shown.sm.passage');
 
-		var drama = window.drama = new DramaReader('#drama_result');
+		var drama = window.drama;
 		drama.setWpm(200);
-		drama.setInput(passage.passage.render());
+		drama.setInput(passage.passage.source);
 		drama.start();
 	});
 
