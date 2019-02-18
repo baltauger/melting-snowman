@@ -64,7 +64,7 @@ $(function() {
 
 		var drama = window.drama;
 		drama.setWpm(200);
-		drama.setInput(passage.passage.source);
+		drama.setInput(passage.passage.render());
 		drama.start();
 	});
 
