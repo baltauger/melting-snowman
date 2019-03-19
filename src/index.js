@@ -66,6 +66,20 @@ $(function() {
 		drama.setWpm(200);
 		drama.setInput(passage.passage.render());
 		drama.start();
+
+		$('#drama').on('mousedown',function(event,passage){
+			console.log('check navigation intent');
+
+			var drama = window.drama;
+			var intent = drama.navigateIntent();
+
+			if (intent != null) {
+				window.story.show(intent);
+			}
+		});
+
 	});
+
+
 
 });
