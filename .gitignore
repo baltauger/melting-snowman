@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 node_modules/
-=======
 node_modules
+dist/
 .DS_Store
 dist
 test-coverage
->>>>>>> upstream/master
