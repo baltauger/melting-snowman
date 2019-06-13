@@ -61,23 +61,32 @@ $(function() {
 	**/
 	$('.passage').on('shown.sm.passage',function(event,passage){
 		console.log('shown.sm.passage');
+		console.log(passage.passage.tags);
 
-		var drama = window.drama;
-		drama.setWpm(200);
-		drama.setInput(passage.passage.render());
-		drama.start();
-
-		$('#drama').on('mousedown',function(event,passage){
-			console.log('check navigation intent');
-
+		if (passage.passage.tags.indexOf("static") == -1)
+		{
 			var drama = window.drama;
-			var intent = drama.navigateIntent();
+			drama.setWpm(200);
+			drama.setInput(passage.passage.render());
+			drama.start();
 
-			if (intent != null) {
-				window.story.show(intent);
-			}
-		});
+			$('#drama').on('mousedown',function(event,passage){
+				console.log('check navigation intent');
 
+				var drama = window.drama;
+				var intent = drama.navigateIntent();
+
+				if (intent != null) {
+					window.story.show(intent);
+				}
+			});
+
+
+		}
+		else
+		{
+			$('#drama').hide();
+		}
 	});
 
 
