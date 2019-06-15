@@ -65,6 +65,8 @@ $(function() {
 
 		if (passage.passage.tags.indexOf("static") == -1)
 		{
+			$('.passage').hide();
+
 			var drama = window.drama;
 			drama.setWpm(200);
 			drama.setInput(passage.passage.render());
