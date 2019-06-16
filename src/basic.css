@@ -111,19 +111,19 @@ tw-storydata {
     color: #333333;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
 }
 .drama_pivot{
     color: #DE0000;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
 }
 .drama_end{
     color: #333333;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
 }
 
 
