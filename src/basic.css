@@ -1,5 +1,9 @@
 /* Give ourselves some decent defaults. */
 
+html {
+	height: 100%;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -124,6 +128,10 @@ tw-storydata {
     text-align: center;
     font-size: 32px;
     font-family: 'Droid Sans Mono', monospace, sans-serif;
+}
+
+.drama_link {
+	text-decoration: underline;
 }
 
 

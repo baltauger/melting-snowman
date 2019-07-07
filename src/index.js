@@ -12,6 +12,9 @@ $(function() {
 	window.story = new Story($('tw-storydata'));
 
 	window.drama = new DramaReader('#drama_result');
+	window.drama.setWpm(200);
+
+	window.triggers = {};
 
 	// Add relevant event handlers here (other events relate to saving, don't know how that affects me)
 
@@ -68,11 +71,12 @@ $(function() {
 			$('.passage').hide();
 
 			var drama = window.drama;
-			drama.setWpm(200);
 			drama.setInput(passage.passage.render());
 			drama.start();
 
-			$('#drama').on('mousedown',function(event,passage){
+			var navHandler = 
+
+			$(document).on('click keypress',function(event,passage){
 				console.log('check navigation intent');
 
 				var drama = window.drama;

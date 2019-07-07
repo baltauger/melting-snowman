@@ -20,7 +20,7 @@ var jQuery = require('jquery');
 function render(source) {
 	/* See below for the definition of readyFunc. */
 
-	var result = _.template(source)({ s: window.story.state, $: readyFunc });
+	var result = _.template(source)({ s: window.story.state, $: readyFunc, drama: window.drama, story: window.story, triggers: window.triggers });
 
 	/*
 	Transform class, ID, hidden, and link shorthands in HTML tags.
