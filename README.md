@@ -20,7 +20,7 @@ Melting Snowman works just like the original Snowman for all passage building pu
 
 ## Linking
 
-Links are declarated using the [[double bracket]] markup, including the [[pipe syntax|markup]]. When a link is found, Drama will split up each word and turn each of those words in a link when shown. Players must then decide to follow that link by pressing SPACE or the Right Mouse button **when its words are shown**. If the player fails to act while the link is being shown, the opportunity to act will have passed.
+Links are declarated using the [[double bracket]] markup, including the [[pipe syntax|markup]]. When a link is found, Drama will split up each word and turn each of those words in a link when shown. Players must then decide to follow that link by pressing SPACE or the Left Mouse button **when its words are shown**. If the player fails to act while the link is being shown, the opportunity to act will have passed.
 
 ## End of passage callback
 
