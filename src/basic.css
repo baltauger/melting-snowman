@@ -46,12 +46,11 @@ tw-storydata {
 	display: none;
 }
 
-#drama_holder{
-    width: 100%;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-    background-color: #ffffff;
-    position: fixed;
-    z-index: 99999999999999999;
+#drama{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
 
 #drama_spacer{
@@ -65,40 +64,29 @@ tw-storydata {
 #drama_result{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
     line-height: 1.5;
 }
 
 #guide_top{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
     color: #DDDDDD;
 }
 
 #guide_bottom{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
     color: #DDDDDD;
 }
 
 #notch{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
     color: #DDDDDD;
-}
-
-#drama_credits{
-    float: right;
-    font-family: 'Droid Sans Mono', sans-serif;
-    font-size: 13px;
-}
-
-#drama_credits a{
-    color: #dddddd;
-    text-decoration: none;
 }
 
 #drama_selector{
@@ -107,7 +95,7 @@ tw-storydata {
 }
 
 .invisible{
-    font-family: 'Droid Sans Mono', sans-serif;
+    font-family: 'Droid Sans Mono', monospace, sans-serif;
     color: #ffffff;
 }
 
@@ -118,10 +106,11 @@ tw-storydata {
     font-family: 'Droid Sans Mono', monospace, sans-serif;
 }
 .drama_pivot{
-    color: #DE0000;
+    color: #333333;
     text-align: center;
     font-size: 32px;
     font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-weight: bold;
 }
 .drama_end{
     color: #333333;
@@ -131,7 +120,7 @@ tw-storydata {
 }
 
 .drama_link {
-	text-decoration: underline;
+	font-style: italic;
 }
 
 

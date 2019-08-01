@@ -26,7 +26,8 @@ $(function() {
 	**/
 	$('#main').on('start.sm.story',function(event, story){
 		console.log('start.sm.story');
-		console.log(story);
+		//console.log(story);
+		$('#drama').hide();
 	});
 
 	// you need to register for the event before starting the story
@@ -44,6 +45,14 @@ $(function() {
 		console.log('hide.sm.passage');
 		var drama = window.drama;
 		drama.stop();
+
+		if ($('#drama').is(':visible')) {
+			$('#drama').fadeOut(200,function(){
+				$('#drama').hide();
+				drama.clear();
+			});
+		}
+
 	});
 
 	/**
@@ -52,6 +61,10 @@ $(function() {
 	 @event showpassage
 	**/
 	$('.passage').on('show.sm.passage',function(event,passage){
+		
+		drama.afterDoneCallback = null;
+		drama.lastShownAction = null;
+
 		console.log('show.sm.passage');
 		console.log(passage);
 	});
@@ -69,12 +82,16 @@ $(function() {
 		if (passage.passage.tags.indexOf("static") == -1)
 		{
 			$('.passage').hide();
+			//$('#drama').show();
 
 			var drama = window.drama;
 			drama.setInput(passage.passage.render());
-			drama.start();
 
-			var navHandler = 
+			$('#drama').fadeIn(200,function(){
+				drama.start();	
+			});
+
+			
 
 			$(document).on('click keypress',function(event,passage){
 				console.log('check navigation intent');
@@ -83,6 +100,7 @@ $(function() {
 				var intent = drama.navigateIntent();
 
 				if (intent != null) {
+					drama.stop();
 					window.story.show(intent);
 				}
 			});
@@ -92,9 +110,7 @@ $(function() {
 		else
 		{
 			$('#drama').hide();
+			$('.passage').show();
 		}
 	});
-
-
-
 });
