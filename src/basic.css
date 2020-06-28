@@ -65,28 +65,28 @@ tw-storydata {
 #drama_result{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     line-height: 1.5;
 }
 
 #guide_top{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     color: #DDDDDD;
 }
 
 #guide_bottom{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     color: #DDDDDD;
 }
 
 #notch{
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     color: #DDDDDD;
 }
 
@@ -95,8 +95,16 @@ tw-storydata {
     width: auto;
 }
 
+#drama_header {
+	line-height: 100%;
+}
+
+#drama_footer {
+
+}
+
 .invisible{
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     color: #ffffff;
 }
 
@@ -104,40 +112,22 @@ tw-storydata {
     color: #333333;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
 }
 .drama_pivot{
     color: #333333;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
     font-weight: bold;
 }
 .drama_end{
     color: #333333;
     text-align: center;
     font-size: 32px;
-    font-family: 'Droid Sans Mono', monospace, sans-serif;
+    font-family: 'Droid Sans Mono', "Lucida Console", Monaco, monospace;
 }
 
 .drama_link {
 	font-style: italic;
-}
-
-
-@media only screen and (max-device-width: 480px){
-    #drama_result, #guide_top, #guide_bottom, #notch, #drama_start, #drama_pivot, #drama_end{
-        font-size:14px;
-    }
-    .drama_start, .drama_pivot, .drama_end{
-        font-size:14px;
-    }
-}
-
-/* scale font sizes for phones */
-
-@media screen and (max-device-width: 480px) {
-	#passage {
-		font-size: 70%;
-	}
 }
